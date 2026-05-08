@@ -1,12 +1,16 @@
 <div align="center">
 
-<!-- 3D Animated Banner -->
+<!-- 3D Animated Banner — clickable -->
+<a href="https://mabdullahab614-alt.github.io/chessmaster/">
 <img src="assets/banner.svg" width="100%" alt="ChessMaster — Built by Abdullah Javid"/>
+</a>
 
 <br/>
 
-<!-- Animated typing subtitle -->
-<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=18&pause=800&color=60A5FA&center=true&vCenter=true&width=700&lines=♔+Real+Minimax+AI+with+Alpha-Beta+Pruning;♕+20%2B+Opening+Book+Positions;♖+Live+Evaluation+Bar;♗+Drag+%26+Drop+%2B+1-Click+Moves;♘+ELO+Tracking+across+Sessions;♙+5+Board+Themes+%7C+Sounds+%7C+PGN+Export;♚+Zero+Install+—+Works+in+Any+Browser" alt="Features"/>
+<!-- Animated typing subtitle — clickable -->
+<a href="https://mabdullahab614-alt.github.io/chessmaster/">
+<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=18&pause=800&color=60A5FA&center=true&vCenter=true&width=700&lines=%E2%99%94+Real+Minimax+AI+with+Alpha-Beta+Pruning;%E2%99%95+20%2B+Opening+Book+Positions;%E2%99%96+Live+Evaluation+Bar;%E2%99%97+Drag+%26+Drop+%2B+1-Click+Moves;%E2%99%98+ELO+Tracking+across+Sessions;%E2%99%99+5+Board+Themes+%7C+Sounds+%7C+PGN+Export;%E2%99%9A+Zero+Install+%E2%80%94+Works+in+Any+Browser" alt="Features"/>
+</a>
 
 <br/><br/>
 
@@ -17,23 +21,23 @@
 
 <br/><br/>
 
-<!-- Stat badges row 1 -->
-<img src="https://img.shields.io/badge/Rating-10%2F10%20%E2%AD%90-FFD700?style=for-the-badge&labelColor=0f172a&logo=star&logoColor=FFD700"/>
+<!-- Stat badges row 1 — all clickable -->
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/Rating-10%2F10%20%E2%AD%90-FFD700?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<img src="https://img.shields.io/badge/AI-Minimax%20%2B%20α%E2%80%93β%20Pruning-8B5CF6?style=for-the-badge&labelColor=0f172a&logo=artificial-intelligence&logoColor=white"/>
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/AI-Minimax%20%2B%20%CE%B1%E2%80%93%CE%B2%20Pruning-8B5CF6?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge&labelColor=0f172a"/>
+<a href="https://github.com/mabdullahab614-alt/chessmaster/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge&labelColor=0f172a"/></a>
 
 <br/><br/>
 
-<!-- Stat badges row 2 -->
-<img src="https://img.shields.io/badge/Zero-Install%20Required-F59E0B?style=for-the-badge&labelColor=0f172a"/>
+<!-- Stat badges row 2 — all clickable -->
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/Zero-Install%20Required-F59E0B?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<img src="https://img.shields.io/badge/5-Board%20Themes-EC4899?style=for-the-badge&labelColor=0f172a"/>
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/5-Board%20Themes-EC4899?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<img src="https://img.shields.io/badge/Depths-1%E2%80%935%20Ply%20Search-3B82F6?style=for-the-badge&labelColor=0f172a"/>
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/Depths-1%E2%80%935%20Ply%20Search-3B82F6?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<img src="https://img.shields.io/badge/Touch-Mobile%20Ready-34D399?style=for-the-badge&labelColor=0f172a"/>
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/Touch-Mobile%20Ready-34D399?style=for-the-badge&labelColor=0f172a"/></a>
 
 </div>
 
@@ -218,13 +222,17 @@ Free to use, modify, and distribute with attribution.
 
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=20&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Built+with+♥+by+Abdullah+Javid;Every+move+makes+you+stronger+♚;Star+⭐+if+you+enjoyed+it!" alt="Footer"/>
+<a href="https://mabdullahab614-alt.github.io/chessmaster/">
+<img src="https://readme-typing-svg.demolab.com?font=Outfit&weight=700&size=20&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Built+with+%E2%99%A5+by+Abdullah+Javid;Every+move+makes+you+stronger+%E2%99%9A;Star+%E2%AD%90+if+you+enjoyed+it!" alt="Footer"/>
+</a>
 
 <br/><br/>
 
-[![GitHub](https://img.shields.io/badge/GitHub-mabdullahab614--alt-181717?style=for-the-badge&logo=github)](https://github.com/mabdullahab614-alt)
+<a href="https://github.com/mabdullahab614-alt"><img src="https://img.shields.io/badge/GitHub-mabdullahab614--alt-181717?style=for-the-badge&logo=github"/></a>
 &nbsp;
-[![Live Game](https://img.shields.io/badge/🌐%20Play%20ChessMaster-3b82f6?style=for-the-badge)](https://mabdullahab614-alt.github.io/chessmaster/)
+<a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Play%20ChessMaster-3b82f6?style=for-the-badge"/></a>
+&nbsp;
+<a href="https://github.com/mabdullahab614-alt/chessmaster/stargazers"><img src="https://img.shields.io/github/stars/mabdullahab614-alt/chessmaster?style=for-the-badge&logo=github&color=FFD700&labelColor=0f172a"/></a>
 
 <br/>
 
