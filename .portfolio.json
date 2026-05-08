@@ -1,0 +1,8 @@
+{
+  "title": "ChessMaster",
+  "description": "A professional chess game with real Minimax AI (alpha-beta pruning + piece-square tables), opening book, live evaluation bar, drag & drop, 5 board themes, sound effects, ELO tracking, move navigation, and PGN export. Zero install — works in any browser.",
+  "tags": ["Chess", "Minimax AI", "JavaScript", "HTML5", "Web Worker", "Game Dev"],
+  "icon": "♚",
+  "live": "https://mabdullahab614-alt.github.io/chessmaster/",
+  "order": 1
+}

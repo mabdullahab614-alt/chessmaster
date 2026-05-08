@@ -1,0 +1,19 @@
+name: 🔔 Notify Portfolio on Push
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger portfolio auto-sync
+        run: |
+          curl -X POST \
+            -H "Authorization: token ${{ secrets.PORTFOLIO_PAT }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            -H "Content-Type: application/json" \
+            https://api.github.com/repos/mabdullahab614-alt/portfolio-website/dispatches \
+            -d '{"event_type":"project-updated","client_payload":{"repo":"${{ github.repository }}"}}'
+          echo "✅ Portfolio sync triggered!"
