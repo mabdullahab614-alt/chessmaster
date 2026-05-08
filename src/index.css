@@ -1,0 +1,247 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Default: Sleek Dark Theme */
+  --board-light: #1e293b;
+  --board-dark: #0f172a;
+  --primary-color: #3b82f6;
+  --secondary-color: #64748b;
+  --accent-color: #00f2ff;
+  --bg-main: #020617;
+  --bg-card: rgba(15, 23, 42, 0.8);
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --glow-color: rgba(59, 130, 246, 0.4);
+}
+
+[data-theme='classic'] {
+  --board-light: #ebecd0;
+  --board-dark: #779556;
+  --primary-color: #5d4037;
+  --secondary-color: #8d6e63;
+  --accent-color: #fbc02d;
+  --bg-main: #f5f0e8;
+  --bg-card: rgba(245, 240, 232, 0.9);
+  --text-main: #212121;
+  --text-muted: #757575;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --glow-color: rgba(93, 64, 55, 0.3);
+}
+
+[data-theme='neon'] {
+  --board-light: #1a1a2e;
+  --board-dark: #0f0f1a;
+  --primary-color: #bc13fe;
+  --secondary-color: #00f2ff;
+  --accent-color: #ff00ff;
+  --bg-main: #020005;
+  --bg-card: rgba(10, 0, 20, 0.85);
+  --text-main: #ffffff;
+  --text-muted: #a78bfa;
+  --border-color: rgba(188, 19, 254, 0.2);
+  --glow-color: rgba(188, 19, 254, 0.5);
+}
+
+[data-theme='anime'] {
+  --board-light: #fdf2f8;
+  --board-dark: #fbcfe8;
+  --primary-color: #ec4899;
+  --secondary-color: #f9a8d4;
+  --accent-color: #f472b6;
+  --bg-main: #fff1f2;
+  --bg-card: rgba(255, 241, 242, 0.9);
+  --text-main: #881337;
+  --text-muted: #be185d;
+  --border-color: rgba(236, 72, 153, 0.15);
+  --glow-color: rgba(236, 72, 153, 0.3);
+}
+
+/* =============== BASE STYLES =============== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @apply font-body transition-colors duration-500;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-display;
+}
+
+/* =============== GLASSMORPHISM =============== */
+.glass {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+}
+
+.glass-strong {
+  background: var(--bg-card);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* =============== SCROLLBAR =============== */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: 9999px;
+  opacity: 0.5;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+/* =============== ANIMATIONS =============== */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 5px var(--glow-color); }
+  50% { box-shadow: 0 0 25px var(--glow-color), 0 0 50px var(--glow-color); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes check-pulse {
+  0%, 100% { box-shadow: inset 0 0 0 3px rgba(239, 68, 68, 0); }
+  50% { box-shadow: inset 0 0 0 3px rgba(239, 68, 68, 0.7); }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-3px); }
+  75% { transform: translateX(3px); }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-float { animation: float 3s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+.animate-slide-up { animation: slide-up 0.5s ease-out; }
+.animate-check-pulse { animation: check-pulse 1s ease-in-out infinite; }
+.animate-shake { animation: shake 0.3s ease-in-out; }
+.animate-gradient { 
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite; 
+}
+.animate-fade-in { animation: fadeIn 0.3s ease-out; }
+.animate-scale-in { animation: scaleIn 0.3s ease-out; }
+.animate-spin-slow { animation: spin-slow 20s linear infinite; }
+
+/* =============== BOARD THEMES =============== */
+[data-theme='neon'] .chess-board {
+  box-shadow: 0 0 30px rgba(188, 19, 254, 0.3), 0 0 60px rgba(0, 242, 255, 0.1);
+}
+
+[data-theme='neon'] .square-selected {
+  background-color: rgba(0, 242, 255, 0.2) !important;
+  box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.5);
+}
+
+/* =============== MODAL OVERLAY =============== */
+.modal-overlay {
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(8px);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modal-content {
+  animation: scaleIn 0.3s ease-out;
+}
+
+/* =============== TIMER =============== */
+.timer-active {
+  @apply relative;
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+.timer-low {
+  animation: pulse-glow 0.8s ease-in-out infinite;
+  color: #ef4444 !important;
+}
+
+/* =============== BUTTON STYLES =============== */
+.btn-primary {
+  @apply px-6 py-3 rounded-xl font-bold transition-all duration-300;
+  background: var(--primary-color);
+  color: white;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--glow-color);
+}
+
+.btn-ghost {
+  @apply px-6 py-3 rounded-xl font-bold transition-all duration-300;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-main);
+}
+.btn-ghost:hover {
+  background: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+/* =============== NAV =============== */
+.nav-link {
+  @apply relative px-4 py-2 text-sm font-medium transition-colors duration-300;
+  color: var(--text-muted);
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+.nav-link.active::after {
+  content: '';
+  @apply absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full;
+  background: var(--primary-color);
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 640px) {
+  .board-container {
+    max-width: calc(100vw - 2rem);
+  }
+}
