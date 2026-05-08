@@ -1,0 +1,498 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400" width="900" height="400">
+<defs>
+  <style>
+    @keyframes bgShift {
+      0%,100%{stop-color:#020617} 50%{stop-color:#0a1628}
+    }
+    @keyframes glow {
+      0%,100%{filter:drop-shadow(0 0 8px #3b82f6) drop-shadow(0 0 20px #3b82f6)}
+      50%{filter:drop-shadow(0 0 20px #60a5fa) drop-shadow(0 0 50px #60a5fa) drop-shadow(0 0 80px #3b82f6)}
+    }
+    @keyframes titleGlow {
+      0%,100%{filter:drop-shadow(0 0 10px #3b82f6)}
+      50%{filter:drop-shadow(0 0 30px #93c5fd) drop-shadow(0 0 60px #3b82f6)}
+    }
+    @keyframes float0 { 0%,100%{transform:translateY(0px)} 50%{transform:translateY(-14px)} }
+    @keyframes float1 { 0%,100%{transform:translateY(-8px)} 50%{transform:translateY(6px)} }
+    @keyframes float2 { 0%,100%{transform:translateY(4px)} 50%{transform:translateY(-12px)} }
+    @keyframes float3 { 0%,100%{transform:translateY(-4px)} 50%{transform:translateY(10px)} }
+    @keyframes float4 { 0%,100%{transform:translateY(8px)} 50%{transform:translateY(-8px)} }
+    @keyframes scan {
+      0%{transform:translateY(-5px);opacity:0}
+      5%{opacity:1}
+      95%{opacity:1}
+      100%{transform:translateY(405px);opacity:0}
+    }
+    @keyframes scanH {
+      0%{transform:translateX(-10px);opacity:0}
+      5%{opacity:.6}
+      95%{opacity:.6}
+      100%{transform:translateX(910px);opacity:0}
+    }
+    @keyframes dash {
+      to{stroke-dashoffset:-200}
+    }
+    @keyframes dash2 {
+      to{stroke-dashoffset:-300}
+    }
+    @keyframes pulseCircle {
+      0%,100%{r:3;opacity:1}
+      50%{r:6;opacity:.4}
+    }
+    @keyframes pulseCircle2 {
+      0%,100%{r:2;opacity:.8}
+      50%{r:5;opacity:.2}
+    }
+    @keyframes orbit {
+      from{transform:rotate(0deg) translateX(55px) rotate(0deg)}
+      to{transform:rotate(360deg) translateX(55px) rotate(-360deg)}
+    }
+    @keyframes orbit2 {
+      from{transform:rotate(120deg) translateX(80px) rotate(-120deg)}
+      to{transform:rotate(480deg) translateX(80px) rotate(-480deg)}
+    }
+    @keyframes orbit3 {
+      from{transform:rotate(240deg) translateX(65px) rotate(-240deg)}
+      to{transform:rotate(600deg) translateX(65px) rotate(-600deg)}
+    }
+    @keyframes ringPulse {
+      0%,100%{stroke-width:1;opacity:.5}
+      50%{stroke-width:2;opacity:1}
+    }
+    @keyframes blink {
+      0%,100%{opacity:1} 50%{opacity:.3}
+    }
+    @keyframes slideIn {
+      from{transform:translateX(-40px);opacity:0}
+      to{transform:translateX(0);opacity:1}
+    }
+    @keyframes fadeUp {
+      from{transform:translateY(20px);opacity:0}
+      to{transform:translateY(0);opacity:1}
+    }
+    @keyframes typewriter {
+      from{clip-path:inset(0 100% 0 0)}
+      to{clip-path:inset(0 0% 0 0)}
+    }
+    @keyframes squarePulse {
+      0%,100%{opacity:.15}
+      50%{opacity:.45}
+    }
+    @keyframes matrixFall {
+      0%{transform:translateY(-20px);opacity:0}
+      10%{opacity:.8}
+      90%{opacity:.8}
+      100%{transform:translateY(420px);opacity:0}
+    }
+    @keyframes particleDrift {
+      0%{transform:translate(0,0);opacity:0}
+      20%{opacity:.6}
+      80%{opacity:.6}
+      100%{transform:translate(var(--dx),var(--dy));opacity:0}
+    }
+    @keyframes hologram {
+      0%{opacity:.9} 25%{opacity:.5} 50%{opacity:.9} 75%{opacity:.3} 100%{opacity:.9}
+    }
+    @keyframes cornerSpin {
+      from{transform:rotate(0deg)}
+      to{transform:rotate(360deg)}
+    }
+    @keyframes pieceFly {
+      0%{transform:translateY(0) scale(1);opacity:1}
+      50%{transform:translateY(-20px) scale(1.1);opacity:.9}
+      100%{transform:translateY(0) scale(1);opacity:1}
+    }
+  </style>
+  <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#020617"/>
+    <stop offset="50%" stop-color="#071a3a"/>
+    <stop offset="100%" stop-color="#020617"/>
+  </linearGradient>
+  <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3b82f6"/>
+    <stop offset="40%" stop-color="#60a5fa"/>
+    <stop offset="70%" stop-color="#a78bfa"/>
+    <stop offset="100%" stop-color="#3b82f6"/>
+  </linearGradient>
+  <linearGradient id="boardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#1e3a5f"/>
+    <stop offset="100%" stop-color="#0f172a"/>
+  </linearGradient>
+  <linearGradient id="scanGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.8"/>
+    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="scanHGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+    <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+    <stop offset="50%" stop-color="#60a5fa" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+  </linearGradient>
+  <filter id="glow1">
+    <feGaussianBlur stdDeviation="3" result="b"/>
+    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+  </filter>
+  <filter id="glow2">
+    <feGaussianBlur stdDeviation="6" result="b"/>
+    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+  </filter>
+  <filter id="glow3">
+    <feGaussianBlur stdDeviation="12" result="b"/>
+    <feComposite in="SourceGraphic" in2="b" operator="over"/>
+  </filter>
+  <filter id="softGlow">
+    <feGaussianBlur in="SourceGraphic" stdDeviation="4" result="b"/>
+    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+  </filter>
+  <clipPath id="boardClip">
+    <rect x="30" y="60" width="320" height="320"/>
+  </clipPath>
+</defs>
+
+<!-- Background -->
+<rect width="900" height="400" fill="url(#bgGrad)"/>
+
+<!-- Grid dots background -->
+<g opacity="0.12">
+  <animate attributeName="opacity" values="0.08;0.15;0.08" dur="4s" repeatCount="indefinite"/>
+  <!-- dots grid 30x30 spacing -->
+  <g fill="#3b82f6">
+    <!-- Row 1 -->
+    <circle cx="50" cy="50" r="1.2"/> <circle cx="80" cy="50" r="1.2"/> <circle cx="110" cy="50" r="1.2"/>
+    <circle cx="140" cy="50" r="1.2"/> <circle cx="170" cy="50" r="1.2"/> <circle cx="200" cy="50" r="1.2"/>
+    <circle cx="230" cy="50" r="1.2"/> <circle cx="260" cy="50" r="1.2"/> <circle cx="290" cy="50" r="1.2"/>
+    <circle cx="320" cy="50" r="1.2"/> <circle cx="350" cy="50" r="1.2"/> <circle cx="380" cy="50" r="1.2"/>
+    <circle cx="410" cy="50" r="1.2"/> <circle cx="440" cy="50" r="1.2"/> <circle cx="470" cy="50" r="1.2"/>
+    <circle cx="500" cy="50" r="1.2"/> <circle cx="530" cy="50" r="1.2"/> <circle cx="560" cy="50" r="1.2"/>
+    <circle cx="590" cy="50" r="1.2"/> <circle cx="620" cy="50" r="1.2"/> <circle cx="650" cy="50" r="1.2"/>
+    <circle cx="680" cy="50" r="1.2"/> <circle cx="710" cy="50" r="1.2"/> <circle cx="740" cy="50" r="1.2"/>
+    <circle cx="770" cy="50" r="1.2"/> <circle cx="800" cy="50" r="1.2"/> <circle cx="830" cy="50" r="1.2"/>
+    <circle cx="860" cy="50" r="1.2"/>
+    <!-- Additional rows -->
+    <circle cx="50" cy="80" r="1.2"/> <circle cx="80" cy="80" r="1.2"/> <circle cx="110" cy="80" r="1.2"/> <circle cx="140" cy="80" r="1.2"/> <circle cx="170" cy="80" r="1.2"/> <circle cx="200" cy="80" r="1.2"/> <circle cx="230" cy="80" r="1.2"/> <circle cx="260" cy="80" r="1.2"/> <circle cx="290" cy="80" r="1.2"/> <circle cx="320" cy="80" r="1.2"/> <circle cx="350" cy="80" r="1.2"/> <circle cx="380" cy="80" r="1.2"/> <circle cx="410" cy="80" r="1.2"/> <circle cx="440" cy="80" r="1.2"/> <circle cx="470" cy="80" r="1.2"/> <circle cx="500" cy="80" r="1.2"/> <circle cx="530" cy="80" r="1.2"/> <circle cx="560" cy="80" r="1.2"/> <circle cx="590" cy="80" r="1.2"/> <circle cx="620" cy="80" r="1.2"/> <circle cx="650" cy="80" r="1.2"/> <circle cx="680" cy="80" r="1.2"/> <circle cx="710" cy="80" r="1.2"/> <circle cx="740" cy="80" r="1.2"/> <circle cx="770" cy="80" r="1.2"/> <circle cx="800" cy="80" r="1.2"/> <circle cx="830" cy="80" r="1.2"/> <circle cx="860" cy="80" r="1.2"/>
+    <circle cx="50" cy="110" r="1.2"/> <circle cx="80" cy="110" r="1.2"/> <circle cx="110" cy="110" r="1.2"/> <circle cx="140" cy="110" r="1.2"/> <circle cx="170" cy="110" r="1.2"/> <circle cx="200" cy="110" r="1.2"/> <circle cx="230" cy="110" r="1.2"/> <circle cx="260" cy="110" r="1.2"/> <circle cx="290" cy="110" r="1.2"/> <circle cx="320" cy="110" r="1.2"/> <circle cx="350" cy="110" r="1.2"/> <circle cx="380" cy="110" r="1.2"/> <circle cx="410" cy="110" r="1.2"/> <circle cx="440" cy="110" r="1.2"/> <circle cx="470" cy="110" r="1.2"/> <circle cx="500" cy="110" r="1.2"/> <circle cx="530" cy="110" r="1.2"/> <circle cx="560" cy="110" r="1.2"/> <circle cx="590" cy="110" r="1.2"/> <circle cx="620" cy="110" r="1.2"/> <circle cx="650" cy="110" r="1.2"/> <circle cx="680" cy="110" r="1.2"/> <circle cx="710" cy="110" r="1.2"/> <circle cx="740" cy="110" r="1.2"/> <circle cx="770" cy="110" r="1.2"/> <circle cx="800" cy="110" r="1.2"/> <circle cx="830" cy="110" r="1.2"/> <circle cx="860" cy="110" r="1.2"/>
+    <circle cx="50" cy="140" r="1.2"/> <circle cx="80" cy="140" r="1.2"/> <circle cx="110" cy="140" r="1.2"/> <circle cx="140" cy="140" r="1.2"/> <circle cx="170" cy="140" r="1.2"/> <circle cx="200" cy="140" r="1.2"/> <circle cx="230" cy="140" r="1.2"/> <circle cx="260" cy="140" r="1.2"/> <circle cx="290" cy="140" r="1.2"/> <circle cx="320" cy="140" r="1.2"/> <circle cx="350" cy="140" r="1.2"/> <circle cx="380" cy="140" r="1.2"/> <circle cx="410" cy="140" r="1.2"/> <circle cx="440" cy="140" r="1.2"/> <circle cx="470" cy="140" r="1.2"/> <circle cx="500" cy="140" r="1.2"/> <circle cx="530" cy="140" r="1.2"/> <circle cx="560" cy="140" r="1.2"/> <circle cx="590" cy="140" r="1.2"/> <circle cx="620" cy="140" r="1.2"/> <circle cx="650" cy="140" r="1.2"/> <circle cx="680" cy="140" r="1.2"/> <circle cx="710" cy="140" r="1.2"/> <circle cx="740" cy="140" r="1.2"/> <circle cx="770" cy="140" r="1.2"/> <circle cx="800" cy="140" r="1.2"/> <circle cx="830" cy="140" r="1.2"/> <circle cx="860" cy="140" r="1.2"/>
+    <circle cx="50" cy="170" r="1.2"/> <circle cx="80" cy="170" r="1.2"/> <circle cx="110" cy="170" r="1.2"/> <circle cx="140" cy="170" r="1.2"/> <circle cx="170" cy="170" r="1.2"/> <circle cx="200" cy="170" r="1.2"/> <circle cx="230" cy="170" r="1.2"/> <circle cx="260" cy="170" r="1.2"/> <circle cx="290" cy="170" r="1.2"/> <circle cx="320" cy="170" r="1.2"/> <circle cx="350" cy="170" r="1.2"/> <circle cx="380" cy="170" r="1.2"/> <circle cx="410" cy="170" r="1.2"/> <circle cx="440" cy="170" r="1.2"/> <circle cx="470" cy="170" r="1.2"/> <circle cx="500" cy="170" r="1.2"/> <circle cx="530" cy="170" r="1.2"/> <circle cx="560" cy="170" r="1.2"/> <circle cx="590" cy="170" r="1.2"/> <circle cx="620" cy="170" r="1.2"/> <circle cx="650" cy="170" r="1.2"/> <circle cx="680" cy="170" r="1.2"/> <circle cx="710" cy="170" r="1.2"/> <circle cx="740" cy="170" r="1.2"/> <circle cx="770" cy="170" r="1.2"/> <circle cx="800" cy="170" r="1.2"/> <circle cx="830" cy="170" r="1.2"/> <circle cx="860" cy="170" r="1.2"/>
+    <circle cx="50" cy="200" r="1.2"/> <circle cx="80" cy="200" r="1.2"/> <circle cx="110" cy="200" r="1.2"/> <circle cx="140" cy="200" r="1.2"/> <circle cx="170" cy="200" r="1.2"/> <circle cx="200" cy="200" r="1.2"/> <circle cx="230" cy="200" r="1.2"/> <circle cx="260" cy="200" r="1.2"/> <circle cx="290" cy="200" r="1.2"/> <circle cx="320" cy="200" r="1.2"/> <circle cx="350" cy="200" r="1.2"/> <circle cx="380" cy="200" r="1.2"/> <circle cx="410" cy="200" r="1.2"/> <circle cx="440" cy="200" r="1.2"/> <circle cx="470" cy="200" r="1.2"/> <circle cx="500" cy="200" r="1.2"/> <circle cx="530" cy="200" r="1.2"/> <circle cx="560" cy="200" r="1.2"/> <circle cx="590" cy="200" r="1.2"/> <circle cx="620" cy="200" r="1.2"/> <circle cx="650" cy="200" r="1.2"/> <circle cx="680" cy="200" r="1.2"/> <circle cx="710" cy="200" r="1.2"/> <circle cx="740" cy="200" r="1.2"/> <circle cx="770" cy="200" r="1.2"/> <circle cx="800" cy="200" r="1.2"/> <circle cx="830" cy="200" r="1.2"/> <circle cx="860" cy="200" r="1.2"/>
+    <circle cx="50" cy="230" r="1.2"/> <circle cx="80" cy="230" r="1.2"/> <circle cx="110" cy="230" r="1.2"/> <circle cx="140" cy="230" r="1.2"/> <circle cx="170" cy="230" r="1.2"/> <circle cx="200" cy="230" r="1.2"/> <circle cx="230" cy="230" r="1.2"/> <circle cx="260" cy="230" r="1.2"/> <circle cx="290" cy="230" r="1.2"/> <circle cx="320" cy="230" r="1.2"/> <circle cx="350" cy="230" r="1.2"/> <circle cx="380" cy="230" r="1.2"/> <circle cx="410" cy="230" r="1.2"/> <circle cx="440" cy="230" r="1.2"/> <circle cx="470" cy="230" r="1.2"/> <circle cx="500" cy="230" r="1.2"/> <circle cx="530" cy="230" r="1.2"/> <circle cx="560" cy="230" r="1.2"/> <circle cx="590" cy="230" r="1.2"/> <circle cx="620" cy="230" r="1.2"/> <circle cx="650" cy="230" r="1.2"/> <circle cx="680" cy="230" r="1.2"/> <circle cx="710" cy="230" r="1.2"/> <circle cx="740" cy="230" r="1.2"/> <circle cx="770" cy="230" r="1.2"/> <circle cx="800" cy="230" r="1.2"/> <circle cx="830" cy="230" r="1.2"/> <circle cx="860" cy="230" r="1.2"/>
+    <circle cx="50" cy="260" r="1.2"/> <circle cx="80" cy="260" r="1.2"/> <circle cx="110" cy="260" r="1.2"/> <circle cx="140" cy="260" r="1.2"/> <circle cx="170" cy="260" r="1.2"/> <circle cx="200" cy="260" r="1.2"/> <circle cx="230" cy="260" r="1.2"/> <circle cx="260" cy="260" r="1.2"/> <circle cx="290" cy="260" r="1.2"/> <circle cx="320" cy="260" r="1.2"/> <circle cx="350" cy="260" r="1.2"/> <circle cx="380" cy="260" r="1.2"/> <circle cx="410" cy="260" r="1.2"/> <circle cx="440" cy="260" r="1.2"/> <circle cx="470" cy="260" r="1.2"/> <circle cx="500" cy="260" r="1.2"/> <circle cx="530" cy="260" r="1.2"/> <circle cx="560" cy="260" r="1.2"/> <circle cx="590" cy="260" r="1.2"/> <circle cx="620" cy="260" r="1.2"/> <circle cx="650" cy="260" r="1.2"/> <circle cx="680" cy="260" r="1.2"/> <circle cx="710" cy="260" r="1.2"/> <circle cx="740" cy="260" r="1.2"/> <circle cx="770" cy="260" r="1.2"/> <circle cx="800" cy="260" r="1.2"/> <circle cx="830" cy="260" r="1.2"/> <circle cx="860" cy="260" r="1.2"/>
+    <circle cx="50" cy="290" r="1.2"/> <circle cx="80" cy="290" r="1.2"/> <circle cx="110" cy="290" r="1.2"/> <circle cx="140" cy="290" r="1.2"/> <circle cx="170" cy="290" r="1.2"/> <circle cx="200" cy="290" r="1.2"/> <circle cx="230" cy="290" r="1.2"/> <circle cx="260" cy="290" r="1.2"/> <circle cx="290" cy="290" r="1.2"/> <circle cx="320" cy="290" r="1.2"/> <circle cx="350" cy="290" r="1.2"/> <circle cx="380" cy="290" r="1.2"/> <circle cx="410" cy="290" r="1.2"/> <circle cx="440" cy="290" r="1.2"/> <circle cx="470" cy="290" r="1.2"/> <circle cx="500" cy="290" r="1.2"/> <circle cx="530" cy="290" r="1.2"/> <circle cx="560" cy="290" r="1.2"/> <circle cx="590" cy="290" r="1.2"/> <circle cx="620" cy="290" r="1.2"/> <circle cx="650" cy="290" r="1.2"/> <circle cx="680" cy="290" r="1.2"/> <circle cx="710" cy="290" r="1.2"/> <circle cx="740" cy="290" r="1.2"/> <circle cx="770" cy="290" r="1.2"/> <circle cx="800" cy="290" r="1.2"/> <circle cx="830" cy="290" r="1.2"/> <circle cx="860" cy="290" r="1.2"/>
+    <circle cx="50" cy="320" r="1.2"/> <circle cx="80" cy="320" r="1.2"/> <circle cx="110" cy="320" r="1.2"/> <circle cx="140" cy="320" r="1.2"/> <circle cx="170" cy="320" r="1.2"/> <circle cx="200" cy="320" r="1.2"/> <circle cx="230" cy="320" r="1.2"/> <circle cx="260" cy="320" r="1.2"/> <circle cx="290" cy="320" r="1.2"/> <circle cx="320" cy="320" r="1.2"/> <circle cx="350" cy="320" r="1.2"/> <circle cx="380" cy="320" r="1.2"/> <circle cx="410" cy="320" r="1.2"/> <circle cx="440" cy="320" r="1.2"/> <circle cx="470" cy="320" r="1.2"/> <circle cx="500" cy="320" r="1.2"/> <circle cx="530" cy="320" r="1.2"/> <circle cx="560" cy="320" r="1.2"/> <circle cx="590" cy="320" r="1.2"/> <circle cx="620" cy="320" r="1.2"/> <circle cx="650" cy="320" r="1.2"/> <circle cx="680" cy="320" r="1.2"/> <circle cx="710" cy="320" r="1.2"/> <circle cx="740" cy="320" r="1.2"/> <circle cx="770" cy="320" r="1.2"/> <circle cx="800" cy="320" r="1.2"/> <circle cx="830" cy="320" r="1.2"/> <circle cx="860" cy="320" r="1.2"/>
+    <circle cx="50" cy="350" r="1.2"/> <circle cx="80" cy="350" r="1.2"/> <circle cx="110" cy="350" r="1.2"/> <circle cx="140" cy="350" r="1.2"/> <circle cx="170" cy="350" r="1.2"/> <circle cx="200" cy="350" r="1.2"/> <circle cx="230" cy="350" r="1.2"/> <circle cx="260" cy="350" r="1.2"/> <circle cx="290" cy="350" r="1.2"/> <circle cx="320" cy="350" r="1.2"/> <circle cx="350" cy="350" r="1.2"/> <circle cx="380" cy="350" r="1.2"/> <circle cx="410" cy="350" r="1.2"/> <circle cx="440" cy="350" r="1.2"/> <circle cx="470" cy="350" r="1.2"/> <circle cx="500" cy="350" r="1.2"/> <circle cx="530" cy="350" r="1.2"/> <circle cx="560" cy="350" r="1.2"/> <circle cx="590" cy="350" r="1.2"/> <circle cx="620" cy="350" r="1.2"/> <circle cx="650" cy="350" r="1.2"/> <circle cx="680" cy="350" r="1.2"/> <circle cx="710" cy="350" r="1.2"/> <circle cx="740" cy="350" r="1.2"/> <circle cx="770" cy="350" r="1.2"/> <circle cx="800" cy="350" r="1.2"/> <circle cx="830" cy="350" r="1.2"/> <circle cx="860" cy="350" r="1.2"/>
+    <circle cx="50" cy="380" r="1.2"/> <circle cx="80" cy="380" r="1.2"/> <circle cx="110" cy="380" r="1.2"/> <circle cx="140" cy="380" r="1.2"/> <circle cx="170" cy="380" r="1.2"/> <circle cx="200" cy="380" r="1.2"/> <circle cx="230" cy="380" r="1.2"/> <circle cx="260" cy="380" r="1.2"/> <circle cx="290" cy="380" r="1.2"/> <circle cx="320" cy="380" r="1.2"/> <circle cx="350" cy="380" r="1.2"/> <circle cx="380" cy="380" r="1.2"/> <circle cx="410" cy="380" r="1.2"/> <circle cx="440" cy="380" r="1.2"/> <circle cx="470" cy="380" r="1.2"/> <circle cx="500" cy="380" r="1.2"/> <circle cx="530" cy="380" r="1.2"/> <circle cx="560" cy="380" r="1.2"/> <circle cx="590" cy="380" r="1.2"/> <circle cx="620" cy="380" r="1.2"/> <circle cx="650" cy="380" r="1.2"/> <circle cx="680" cy="380" r="1.2"/> <circle cx="710" cy="380" r="1.2"/> <circle cx="740" cy="380" r="1.2"/> <circle cx="770" cy="380" r="1.2"/> <circle cx="800" cy="380" r="1.2"/> <circle cx="830" cy="380" r="1.2"/> <circle cx="860" cy="380" r="1.2"/>
+  </g>
+</g>
+
+<!-- Animated circuit lines -->
+<g stroke="#3b82f6" fill="none" opacity="0.25">
+  <path d="M0,120 L150,120 L180,90 L400,90" stroke-width="1.5" stroke-dasharray="15,8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-230" dur="3s" repeatCount="indefinite"/>
+  </path>
+  <path d="M900,80 L700,80 L670,110 L500,110" stroke-width="1.5" stroke-dasharray="12,6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-180" dur="2.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,280 L120,280 L150,310 L300,310" stroke-width="1.5" stroke-dasharray="10,8">
+    <animate attributeName="stroke-dashoffset" from="0" to="-180" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M900,320 L720,320 L690,290 L550,290" stroke-width="1.5" stroke-dasharray="14,6">
+    <animate attributeName="stroke-dashoffset" from="0" to="-200" dur="4s" repeatCount="indefinite"/>
+  </path>
+  <path d="M0,200 L80,200 L100,220 L200,220 L220,200 L380,200" stroke-width="1" stroke-dasharray="8,10">
+    <animate attributeName="stroke-dashoffset" from="0" to="-180" dur="5s" repeatCount="indefinite"/>
+  </path>
+  <path d="M900,200 L820,200 L800,180 L620,180" stroke-width="1" stroke-dasharray="8,10">
+    <animate attributeName="stroke-dashoffset" from="0" to="-180" dur="4.5s" repeatCount="indefinite"/>
+  </path>
+</g>
+
+<!-- Circuit nodes (glowing dots) -->
+<g filter="url(#glow1)">
+  <circle cx="150" cy="120" r="3" fill="#3b82f6">
+    <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="700" cy="80" r="3" fill="#60a5fa">
+    <animate attributeName="r" values="2;5;2" dur="2.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="280" r="3" fill="#3b82f6">
+    <animate attributeName="r" values="3;5;3" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="720" cy="320" r="3" fill="#a78bfa">
+    <animate attributeName="r" values="2;4;2" dur="1.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="820" cy="200" r="3" fill="#60a5fa">
+    <animate attributeName="r" values="2;4;2" dur="2.2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2.2s" repeatCount="indefinite"/>
+  </circle>
+</g>
+
+<!-- 3D Chess Board (isometric perspective) - LEFT SIDE -->
+<g transform="translate(190, 200)">
+  <!-- Board base shadow -->
+  <ellipse cx="0" cy="8" rx="145" ry="30" fill="#3b82f6" opacity="0.15">
+    <animate attributeName="rx" values="140;148;140" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite"/>
+  </ellipse>
+
+  <!-- Isometric board - using skew transform -->
+  <g transform="scale(1, 0.55) rotate(-45) translate(-100,-100)">
+    <!-- Board squares 8x8 -->
+    <!-- Row 0 -->
+    <rect x="0"   y="0"   width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="25"  y="0"   width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="50"  y="0"   width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="75"  y="0"   width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="100" y="0"   width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="125" y="0"   width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="150" y="0"   width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="175" y="0"   width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <!-- Row 1 -->
+    <rect x="0"   y="25"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="25"  y="25"  width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="50"  y="25"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="75"  y="25"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="100" y="25"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="125" y="25"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="150" y="25"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="175" y="25"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <!-- Row 2 -->
+    <rect x="0"   y="50"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="25"  y="50"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="50"  y="50"  width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="75"  y="50"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="100" y="50"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="125" y="50"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="150" y="50"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="175" y="50"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <!-- Row 3 -->
+    <rect x="0"   y="75"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="25"  y="75"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="50"  y="75"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="75"  y="75"  width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="100" y="75"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="125" y="75"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="150" y="75"  width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="175" y="75"  width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <!-- Row 4 -->
+    <rect x="0"   y="100" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="25"  y="100" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="50"  y="100" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="75"  y="100" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="100" y="100" width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="125" y="100" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="150" y="100" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="175" y="100" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <!-- Row 5 -->
+    <rect x="0"   y="125" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="25"  y="125" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="50"  y="125" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="75"  y="125" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="100" y="125" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="125" y="125" width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="150" y="125" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="175" y="125" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <!-- Row 6 -->
+    <rect x="0"   y="150" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="25"  y="150" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="50"  y="150" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="75"  y="150" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="100" y="150" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="125" y="150" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="150" y="150" width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <rect x="175" y="150" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <!-- Row 7 -->
+    <rect x="0"   y="175" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="25"  y="175" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="50"  y="175" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="75"  y="175" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="100" y="175" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="125" y="175" width="25" height="25" fill="#1e293b" opacity="0.9"/>
+    <rect x="150" y="175" width="25" height="25" fill="#0f172a" opacity="0.9"/>
+    <rect x="175" y="175" width="25" height="25" fill="#1e3a5f" opacity="0.9"/>
+    <!-- Grid lines -->
+    <g stroke="#3b82f6" stroke-width="0.5" opacity="0.4">
+      <line x1="0" y1="0" x2="200" y2="0"/>
+      <line x1="0" y1="25" x2="200" y2="25"/>
+      <line x1="0" y1="50" x2="200" y2="50"/>
+      <line x1="0" y1="75" x2="200" y2="75"/>
+      <line x1="0" y1="100" x2="200" y2="100"/>
+      <line x1="0" y1="125" x2="200" y2="125"/>
+      <line x1="0" y1="150" x2="200" y2="150"/>
+      <line x1="0" y1="175" x2="200" y2="175"/>
+      <line x1="0" y1="200" x2="200" y2="200"/>
+      <line x1="0" y1="0" x2="0" y2="200"/>
+      <line x1="25" y1="0" x2="25" y2="200"/>
+      <line x1="50" y1="0" x2="50" y2="200"/>
+      <line x1="75" y1="0" x2="75" y2="200"/>
+      <line x1="100" y1="0" x2="100" y2="200"/>
+      <line x1="125" y1="0" x2="125" y2="200"/>
+      <line x1="150" y1="0" x2="150" y2="200"/>
+      <line x1="175" y1="0" x2="175" y2="200"/>
+      <line x1="200" y1="0" x2="200" y2="200"/>
+    </g>
+  </g>
+
+  <!-- Scanning highlight on board -->
+  <g transform="scale(1, 0.55) rotate(-45) translate(-100,-100)" clip-path="inset(0 0 0 0)">
+    <rect x="0" y="-5" width="200" height="10" fill="url(#scanGrad)" opacity="0.7">
+      <animateTransform attributeName="transform" type="translate" from="0,-10" to="0,210" dur="3s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+</g>
+
+<!-- Orbiting rings around center point -->
+<g transform="translate(190, 200)">
+  <circle cx="0" cy="0" r="110" fill="none" stroke="#3b82f6" stroke-width="0.8" stroke-dasharray="5,8" opacity="0.3">
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="0" cy="0" r="140" fill="none" stroke="#60a5fa" stroke-width="0.5" stroke-dasharray="3,12" opacity="0.2">
+    <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="30s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Orbiting nodes -->
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="8s" repeatCount="indefinite"/>
+    <circle cx="110" cy="0" r="4" fill="#3b82f6" filter="url(#glow1)">
+      <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="12s" repeatCount="indefinite"/>
+    <circle cx="140" cy="0" r="3" fill="#a78bfa" filter="url(#glow1)">
+      <animate attributeName="r" values="2;4;2" dur="3s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  <g>
+    <animateTransform attributeName="transform" type="rotate" from="240" to="600" dur="10s" repeatCount="indefinite"/>
+    <circle cx="125" cy="0" r="3.5" fill="#60a5fa" filter="url(#glow1)">
+      <animate attributeName="r" values="2.5;4.5;2.5" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</g>
+
+<!-- Floating chess pieces - RIGHT SIDE -->
+<!-- King -->
+<g transform="translate(590, 100)">
+  <text font-size="52" fill="#f8fafc" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.9">♔</text>
+  <animateTransform attributeName="transform" type="translate" values="590,100;590,84;590,100" dur="3s" repeatCount="indefinite"/>
+</g>
+<!-- Queen -->
+<g transform="translate(680, 140)">
+  <text font-size="44" fill="#60a5fa" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.85">♕</text>
+  <animateTransform attributeName="transform" type="translate" values="680,140;680,126;680,140" dur="4s" repeatCount="indefinite" begin="0.5s"/>
+</g>
+<!-- Rook -->
+<g transform="translate(760, 100)">
+  <text font-size="40" fill="#a78bfa" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.8">♖</text>
+  <animateTransform attributeName="transform" type="translate" values="760,100;760,88;760,100" dur="3.5s" repeatCount="indefinite" begin="1s"/>
+</g>
+<!-- Bishop -->
+<g transform="translate(840, 130)">
+  <text font-size="38" fill="#34d399" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.75">♗</text>
+  <animateTransform attributeName="transform" type="translate" values="840,130;840,118;840,130" dur="2.8s" repeatCount="indefinite" begin="0.3s"/>
+</g>
+<!-- Knight -->
+<g transform="translate(625, 200)">
+  <text font-size="46" fill="#f59e0b" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.85">♘</text>
+  <animateTransform attributeName="transform" type="translate" values="625,200;625,185;625,200" dur="3.2s" repeatCount="indefinite" begin="1.5s"/>
+</g>
+<!-- Pawn -->
+<g transform="translate(720, 180)">
+  <text font-size="36" fill="#f8fafc" font-family="serif" text-anchor="middle" filter="url(#glow1)" opacity="0.7">♙</text>
+  <animateTransform attributeName="transform" type="translate" values="720,180;720,168;720,180" dur="2.5s" repeatCount="indefinite" begin="0.8s"/>
+</g>
+<!-- Black pieces -->
+<g transform="translate(800, 260)">
+  <text font-size="48" fill="#1e293b" font-family="serif" text-anchor="middle" stroke="#60a5fa" stroke-width="1" filter="url(#glow1)" opacity="0.8">♚</text>
+  <animateTransform attributeName="transform" type="translate" values="800,260;800,246;800,260" dur="3.8s" repeatCount="indefinite" begin="2s"/>
+</g>
+<g transform="translate(870, 220)">
+  <text font-size="40" fill="#0f172a" font-family="serif" text-anchor="middle" stroke="#a78bfa" stroke-width="1" filter="url(#glow1)" opacity="0.75">♛</text>
+  <animateTransform attributeName="transform" type="translate" values="870,220;870,206;870,220" dur="3.3s" repeatCount="indefinite" begin="0.6s"/>
+</g>
+<g transform="translate(650, 300)">
+  <text font-size="36" fill="#0f172a" font-family="serif" text-anchor="middle" stroke="#34d399" stroke-width="0.8" filter="url(#glow1)" opacity="0.7">♟</text>
+  <animateTransform attributeName="transform" type="translate" values="650,300;650,288;650,300" dur="2.9s" repeatCount="indefinite" begin="1.2s"/>
+</g>
+
+<!-- Horizontal scan line -->
+<rect x="-10" y="195" width="30" height="2" fill="url(#scanHGrad)" opacity="0.8">
+  <animateTransform attributeName="transform" type="translate" values="-10,0;910,0;-10,0" dur="4s" repeatCount="indefinite"/>
+</rect>
+
+<!-- MAIN TITLE -->
+<g transform="translate(450, 0)">
+  <!-- Title glow background -->
+  <text x="0" y="155" font-family="'Segoe UI Black',Arial Black,sans-serif" font-weight="900" font-size="82" fill="#3b82f6" text-anchor="middle" opacity="0.15" filter="url(#glow3)">CHESSMASTER</text>
+  <!-- Main title -->
+  <text x="0" y="152" font-family="'Segoe UI Black',Arial Black,sans-serif" font-weight="900" font-size="80" fill="url(#titleGrad)" text-anchor="middle" filter="url(#softGlow)">
+    CHESS
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <text x="218" y="152" font-family="'Segoe UI Black',Arial Black,sans-serif" font-weight="900" font-size="80" fill="#f8fafc" text-anchor="start" filter="url(#softGlow)" opacity="0.95">MASTER</text>
+
+  <!-- Subtitle -->
+  <text x="0" y="192" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle" letter-spacing="6" opacity="0.9">
+    B U I L T  B Y  A B D U L L A H  J A V I D
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="2.5s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Divider line -->
+  <line x1="-180" y1="205" x2="180" y2="205" stroke="url(#titleGrad)" stroke-width="1.5" opacity="0.6">
+    <animate attributeName="x1" values="-180;-120;-180" dur="3s" repeatCount="indefinite"/>
+    <animate attributeName="x2" values="180;120;180" dur="3s" repeatCount="indefinite"/>
+  </line>
+
+  <!-- Feature pills -->
+  <g transform="translate(0, 230)">
+    <!-- Pill 1 -->
+    <rect x="-310" y="0" width="130" height="26" rx="13" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="-245" y="17" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">🤖 Minimax AI</text>
+    <!-- Pill 2 -->
+    <rect x="-165" y="0" width="120" height="26" rx="13" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="-105" y="17" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">📖 Opening Book</text>
+    <!-- Pill 3 -->
+    <rect x="-30" y="0" width="110" height="26" rx="13" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="25" y="17" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">📊 Eval Bar</text>
+    <!-- Pill 4 -->
+    <rect x="95" y="0" width="110" height="26" rx="13" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="150" y="17" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">🎵 Sound FX</text>
+    <!-- Pill 5 -->
+    <rect x="220" y="0" width="100" height="26" rx="13" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1" opacity="0.9"/>
+    <text x="270" y="17" font-family="Arial,sans-serif" font-size="11" fill="#60a5fa" text-anchor="middle" font-weight="600">🏆 ELO Track</text>
+  </g>
+
+  <!-- Play button -->
+  <g transform="translate(0, 300)" style="cursor:pointer">
+    <rect x="-90" y="0" width="180" height="44" rx="22" fill="#3b82f6">
+      <animate attributeName="opacity" values="0.9;1;0.9" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="-90" y="0" width="180" height="44" rx="22" fill="none" stroke="#93c5fd" stroke-width="1.5" opacity="0.6">
+      <animate attributeName="stroke-width" values="1;2.5;1" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0" y="27" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="white" text-anchor="middle">▶ PLAY NOW</text>
+  </g>
+</g>
+
+<!-- Corner decorations -->
+<g fill="none" stroke="#3b82f6" stroke-width="1.5" opacity="0.5">
+  <!-- Top left -->
+  <path d="M10,10 L40,10 L40,40"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/></path>
+  <!-- Top right -->
+  <path d="M890,10 L860,10 L860,40"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="0.5s"/></path>
+  <!-- Bottom left -->
+  <path d="M10,390 L40,390 L40,360"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="1s"/></path>
+  <!-- Bottom right -->
+  <path d="M890,390 L860,390 L860,360"><animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite" begin="1.5s"/></path>
+</g>
+
+<!-- Floating particles -->
+<g fill="#3b82f6">
+  <circle cx="50" cy="150" r="1.5" opacity="0.6"><animate attributeName="cy" values="150;120;150" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.7;0.2" dur="4s" repeatCount="indefinite"/></circle>
+  <circle cx="880" cy="250" r="1.5" opacity="0.5"><animate attributeName="cy" values="250;220;250" dur="5s" repeatCount="indefinite" begin="1s"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="5s" repeatCount="indefinite" begin="1s"/></circle>
+  <circle cx="450" cy="30" r="1" opacity="0.4"><animate attributeName="cy" values="30;10;30" dur="3s" repeatCount="indefinite" begin="0.5s"/><animate attributeName="opacity" values="0.1;0.5;0.1" dur="3s" repeatCount="indefinite" begin="0.5s"/></circle>
+  <circle cx="350" cy="370" r="1.5" opacity="0.5"><animate attributeName="cy" values="370;350;370" dur="6s" repeatCount="indefinite" begin="2s"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="6s" repeatCount="indefinite" begin="2s"/></circle>
+</g>
+</svg>
