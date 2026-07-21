@@ -26,7 +26,7 @@
 &nbsp;
 <a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/AI-Minimax%20%2B%20%CE%B1%E2%80%93%CE%B2%20Pruning-8B5CF6?style=for-the-badge&labelColor=0f172a"/></a>
 &nbsp;
-<a href="https://github.com/mabdullahab614-alt/chessmaster/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-22C55E?style=for-the-badge&labelColor=0f172a"/></a>
+<a href="#-license"><img src="https://img.shields.io/badge/License-All%20Rights%20Reserved-DC2626?style=for-the-badge&labelColor=0f172a"/></a>
 
 <br/><br/>
 
@@ -212,9 +212,19 @@ python -m http.server 8888
 
 ## 📜 License
 
-**MIT License** — © 2026 Abdullah Javid
+**All Rights Reserved © 2026 Abdullah Javid**
 
-Free to use, modify, and distribute with attribution.
+This repository and its contents — including source code, AI engine, design, and documentation — are made publicly visible **for portfolio and demonstration purposes only**.
+
+**No part of this repository may be copied, modified, distributed, sublicensed, or used** — in whole or in part, for personal, educational, or commercial purposes — without explicit prior written permission from the author.
+
+Forking or cloning this repository does **not** grant any rights to use, reproduce, or redistribute its contents.
+
+If you are interested in using any part of this project, please contact me directly for permission:
+
+📧 **Email:** mabdullah.ab614@gmail.com
+🔗 **GitHub:** [github.com/mabdullahab614-alt](https://github.com/mabdullahab614-alt)
+💼 **LinkedIn:** [linkedin.com/in/abdullah-javid-b217a2384](https://www.linkedin.com/in/abdullah-javid-b217a2384/)
 
 ---
 
@@ -229,6 +239,10 @@ Free to use, modify, and distribute with attribution.
 <br/><br/>
 
 <a href="https://github.com/mabdullahab614-alt"><img src="https://img.shields.io/badge/GitHub-mabdullahab614--alt-181717?style=for-the-badge&logo=github"/></a>
+&nbsp;
+<a href="mailto:mabdullah.ab614@gmail.com"><img src="https://img.shields.io/badge/Email-mabdullah.ab614%40gmail.com-ff2d2d?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+&nbsp;
+<a href="https://www.linkedin.com/in/abdullah-javid-b217a2384/"><img src="https://img.shields.io/badge/LinkedIn-Abdullah%20Javid-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
 &nbsp;
 <a href="https://mabdullahab614-alt.github.io/chessmaster/"><img src="https://img.shields.io/badge/%F0%9F%8C%90%20Play%20ChessMaster-3b82f6?style=for-the-badge"/></a>
 &nbsp;
